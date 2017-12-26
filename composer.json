@@ -1,0 +1,51 @@
+{
+  "name": "yuncms/yuncms-device",
+  "description": "The device module for the yuncms.",
+  "keywords": [
+    "yii",
+    "yii2",
+    "yii2-extension",
+    "yuncms",
+    "device"
+  ],
+  "type": "yii2-extension",
+  "license": "MIT",
+  "require": {
+    "php": ">=5.4.0",
+    "yiisoft/yii2": "~2.0.6",
+    "yiisoft/yii2-queue": "~2.0.5"
+  },
+  "autoload": {
+    "psr-4": {
+      "yuncms\\device\\": ""
+    }
+  },
+  "extra": {
+    "yuncms": {
+      "id": "device",
+      "translate": {
+        "class": "yii\\i18n\\PhpMessageSource",
+        "sourceLanguage": "en-US",
+        "basePath": "@yuncms/device/messages"
+      },
+      "cron": {
+      },
+      "migrationNamespace": "yuncms\\device\\migrations",
+      "backend": {
+        "class": "yuncms\\device\\backend\\Module"
+      },
+      "frontend": {
+        "class": "yuncms\\device\\frontend\\Module"
+      }
+    },
+    "branch-alias": {
+      "dev-master": "2.0-dev"
+    }
+  },
+  "repositories": [
+    {
+      "type": "composer",
+      "url": "https://asset-packagist.org"
+    }
+  ]
+}
